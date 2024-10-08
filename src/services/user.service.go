@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"line/src/common/token"
 	"line/src/models"
-	"log"
 	"sync"
 
 	"gorm.io/gorm"
@@ -60,7 +59,7 @@ func (us *UserService) SigninUser(email, password string) (map[string]interface{
 	if err != nil {
 		return nil, errors.New("token generation error")
 	}
-	log.Print("User login successfully... ", user)
+	// log.Print("User login successfully... ", user)
 	return map[string]interface{}{
 		"id":      user.ID,
 		"name":    user.Name,
