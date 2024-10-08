@@ -1,0 +1,9 @@
+tmp_dir = "dist"
+
+[build]
+  bin = "./dist/main.exe"
+  cmd = "go build -o ./dist/main.exe ./src/"
+
+[log]
+time = true
+color = true
